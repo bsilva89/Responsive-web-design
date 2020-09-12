@@ -1,9 +1,11 @@
 html {
-    height: 100%;
+    background-image: linear-gradient(#FC5E55, #FA4083);
 }
 
 body {
-    background-image: linear-gradient(#FC5E55, #FA4083);
+    background-image: url(images/image-lion-background.png);
+    background-position: top center;
+    background-repeat: no-repeat;
     font-family: 'Playfair Display', serif;
     color: white;
     font-size: 1.125rem;
@@ -28,12 +30,18 @@ header {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
 }
 
 main {
     min-height: 300px;
     display: flex;
     align-items: center;
+}
+
+.main2 {
+    min-height: 300px;
+    padding-top: 50px;
 }
 
 .cards {
@@ -47,7 +55,8 @@ main {
     background-image: url(images/image-background-card1.jpg);
     background-size: cover;
     background-position: bottom;
-    width: 30%;   
+    width: 30%;  
+    border-radius: 4px;
 }
 
 .cards2 {
@@ -55,6 +64,7 @@ main {
     background-size: cover;
     background-position: bottom;
     width: 30%;      
+    border-radius: 4px;
 }
 
 .cards3 {
@@ -62,6 +72,7 @@ main {
     background-size: cover;
     background-position: bottom;
     width: 30%;     
+    border-radius: 4px;
 }
 
 .herobox1 {
@@ -70,6 +81,7 @@ main {
 
 .herobox2 {
     flex: 1;
+    border-radius: 4px;
 }
 
 h1 {
@@ -96,12 +108,73 @@ p {
     line-height: 1.375rem;
     margin-bottom: 0.375rem;
     font-family: sans-serif;
+    font-size: 1rem;
 }
 
 .myButton{
     background-color: white;
     color: #FA4083;
     font-family: 'Playfair Display', serif;
-    padding: 11px 25px;
+    margin-top: 5px;
+    padding: 10px 20px;
     display: inline-block;
+    border-radius: 2px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.349);
+}
+
+.myButton:hover{
+    background-color: tomato;
+    transition-duration: 100ms;
+}
+
+nav{
+    display: flex;
+}
+
+nav .myButton {
+    padding: 10px 14px;
+    border: 1px solid white;
+    background-color: initial;
+    box-shadow: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.recomendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.tbox {
+    width: 47%;
+    padding: 50px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+.tbox :last-child{
+    font-size: 0.875rem;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+}
+
+.navbutton{
+    position: relative;
+}
+
+.navbutton:hover .dropdown {
+    display: block;
+}
+
+.dropdown .myButton:hover{
+    background-color: violet;
+    transition-duration: 100ms;
 }
